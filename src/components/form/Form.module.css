@@ -1,0 +1,137 @@
+.form {
+  max-width: 700px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+    width: 100%;
+}
+
+.group label {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #333;
+  width: 30%;
+}
+
+.group select {
+    background-color: white;
+}
+
+.group input,
+.group select,
+.group textarea {
+  padding: 8px 12px;
+  width: 70%;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.452);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.group select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 205, 130, 0.6);
+}
+
+.group input:focus,
+.group select:focus,
+.group textarea:focus {
+  border-color: rgb(180, 151, 64); /* cor semelhante ao botão */
+  outline: none;
+}
+
+.group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.group > div {
+    width: 70%;
+}
+
+.group > div > input {
+    width: unset;
+    cursor: pointer;
+}
+
+.group > div > p {
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+}
+
+.wrapperButton {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wrapperButton > button {
+	width: max-content;
+	margin-left: 30%;
+	background-color: rgb(180, 151, 64);
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 8px 16px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.wrapperButton >  button:hover {
+  	background-color: rgb(143, 118, 43);
+}
+
+.wasValidated input:invalid,
+.wasValidated select:invalid,
+.wasValidated textarea:invalid {
+  border: 1.5px solid #c00; 
+}
+
+.errorMessage {
+  color: #c00;
+  font-size: 0.9rem;
+}
+
+
+@media (min-width: 1020px) {
+	.group {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.group > label {
+		font-size: 0.95rem;
+		color: #333;
+		width: 45%;
+	}
+
+	.group textarea {
+		min-height: unset;
+      	max-height: 120px;
+  	}
+
+	.group input,
+	.group select,
+	.group textarea,
+	.group > div {
+		width: 55%;
+	}
+
+	.menssagem > label {
+		padding-bottom: 20px;
+	}
+
+	.wrapperButton > button {
+		margin-left: 45%;
+	}
+}

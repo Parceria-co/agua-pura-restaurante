@@ -1,0 +1,38 @@
+.aboutUs {
+    margin: 32px 0;
+}
+
+.aboutUs > .title {
+    background-color: rgba(180, 151, 64);
+    padding: 48px 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.aboutUs > .title > h2 {
+    margin: auto;
+    width: 80%;
+}
+
+.aboutUs > .wrapperText {
+    padding: 64px 0;
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.aboutUs > .wrapperText > p {
+    font-size: 18px;
+    color: #979797;
+    text-align: justify;
+    white-space: pre-line;
+}
+
+@media (min-width: 1020px) {
+    .aboutUs > .wrapperText {
+        width: 880px;
+    }
+}

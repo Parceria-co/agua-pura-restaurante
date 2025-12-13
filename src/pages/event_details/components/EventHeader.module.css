@@ -1,0 +1,61 @@
+.header {
+    width: 100vw;
+
+    background-color: var(--redColor);
+    display: flex;
+    margin-top: 78px;
+    height: fit-content;
+    
+}
+
+.fixed {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    margin-top: 0;
+}
+
+.header > .btnBurguer {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+
+    color: white;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+
+.listHorizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1104px;
+    margin: auto;
+}
+
+.listHorizontal > a {
+    color: white;
+    text-align: center;
+    width: fit-content;
+    font-weight: 600;
+    padding: 16px;
+}
+
+.listHorizontal > a:hover {
+    background-color: rgba(180, 151, 64, 0.541);
+    border-bottom: 2px solid rgba(180, 151, 64);
+}
+
+@media (min-width: 1020px) {
+
+}

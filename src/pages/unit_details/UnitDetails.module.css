@@ -1,0 +1,281 @@
+.container {
+    width: 100vw;
+    margin-top: 78px;
+    overflow: hidden;
+}
+
+.container > .title {
+    display: flex;
+    height: 136px;
+}
+
+.container > .title > h1 {
+    margin: auto;
+    text-align: center;
+    width: 400px;
+}
+
+.wrapper > .imagem {
+    height: calc(100vh - 214px);
+}
+
+.wrapper > .imagem > img {
+    object-fit: cover;
+    object-position: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.wrapperDivs > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0 32px;
+    margin: auto;
+}
+
+.wrapperDivs > div > h2 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.wrapperDivs > div > button {
+    padding: 8px 16px;
+    background-color: var(--goldColor);
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;   
+    
+    font-size: 16px;
+
+    transition: .3s ease;
+}
+
+.wrapperDivs > div > button:hover {
+    background-color: rgb(196, 169, 89);
+}
+
+.darkerDiv {
+    background-color: var(--redColor);
+}
+
+.darkerDiv > h2 {
+    color: #e6cd84;
+}
+
+.lighterDiv {
+    background-color: #e6cd84;
+}
+
+.lighterDiv > h2 {
+    color: var(--redColor);
+}
+
+.wrapperImages {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 80%;
+
+    margin: 32px auto;
+}
+
+.wrapperImages > .images {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.wrapperImages > .images > .imageContainer {
+    width: 100%;
+    height: 360px;
+}
+
+.wrapperImages > .images > .imageContainer > img {
+    object-fit: cover;
+    object-position: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.wrapperInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.wrapperInfo > h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.socialMidias {
+    text-align: center;
+    margin: 24px;
+}
+
+.socialMidias > h2 {
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: var(--redColor);
+}
+
+.wrapperSocial {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.wrapperSocial > .imageIcon {
+    width: 48px;
+    height: 48px; 
+    
+    background-color: #ebebeb;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    cursor: pointer;
+}
+
+.wrapperSocial > .imageIcon:hover {
+    background-color: #e0e0e0;
+}
+
+.wrapperSocial > .imageIcon > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}   
+
+.backgroundContactUs {
+    background-color: #ebebeb;
+}
+
+.wrapperContactUs {
+    width: 100%;
+
+    padding: 64px 10%;
+}
+
+.wrapperContactUs > h2 {
+    margin: 8px auto;
+    width: fit-content;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--redColor);
+}
+
+.divisor { 
+    width: 100%;
+    height: 1px;
+    background-color: #c4c4c4;
+    margin: 64px 0;
+}
+
+.wrapperMapAndForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperMap > .map {
+    height: 400px;
+    width: 100%;
+}
+
+
+@media (min-width: 1020px) {
+    .container > .title > h1 {
+       width: unset;
+   }
+
+   .wrapper {
+        display: flex;
+    }
+   
+    .wrapper > .imagem {
+        height: unset;
+        width: 50%;
+        aspect-ratio: 1/1;
+    }
+
+    .wrapper > .wrapperDivs {
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wrapper > .wrapperDivs > div {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .wrapperDivs > div > h2 {
+        width: 80%;
+        text-align: center;
+    }
+
+    .wrapperImages {
+        width: 90%;
+        max-width: 1104px;
+    }
+
+    .wrapperImages > .images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 24px;
+    }
+
+    .wrapperImages > .images > .imageContainer {
+        height: 160px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .wrapperContactUs {
+        padding: 64px 0;
+        width: 90%;
+        max-width: 1104px;
+        margin: auto;
+    }
+
+    .wrapperMapAndForm {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        height: 504px;
+    }
+
+    .wrapperMapAndForm > .wrapperMap {
+        width: 50%;
+        height: 100%;
+    } 
+
+    .wrapperMapAndForm > .wrapperMap > .map {
+        width: 100%;
+        height: 100%;
+        min-width: 300px;
+    } 
+
+    .wrapperMapAndForm > .wrapperForm {
+        width: 50%;
+    }
+    /* > .map {
+    height: 400px;
+    width: 100%;
+} */
+}

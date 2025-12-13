@@ -1,0 +1,117 @@
+.wrapperInfoSaloons {
+    padding: 32px 0;
+}
+
+.wrapperInfoSaloons > .title {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.wrapperInfoSaloons > .wrapperImages {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    margin: 64px auto;
+}
+
+.wrapperImages > .imageAndInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;   
+}
+
+.wrapperImages > .imageAndInfo > .imagem {
+    width: 70%;
+    max-width: 288px;
+    border: 4px solid rgba(134, 134, 134, 0.253);
+    aspect-ratio: 1 / 1;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.wrapperImages > .imageAndInfo > .imagem > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.wrapperImages > .imageAndInfo > .title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.wrapperImages > .imageAndInfo > .title > h3 {
+    font-size: 28px;
+    color: rgba(180, 151, 64);
+}
+
+.wrapperImages > .imageAndInfo > .title > p {
+    font-size: 20px;
+    text-transform: lowercase;
+}
+
+.wrapperImages > .imageAndInfo > .description {
+    text-align: center;
+    color: #979797;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    font-size: 15px;
+}
+
+/* classe criada dentro do module (será usada com styles.fullRow) */
+.fullRow {
+    grid-column: 1 / -1;      
+    justify-self: center;     
+}
+
+
+@media (min-width: 750px) {
+
+    .wrapperInfoSaloons > .wrapperImages {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        justify-items: center;
+        align-items: start;
+    }
+
+    .wrapperImages > .imageAndInfo {
+        width: 312px;
+        margin: 0;
+        align-self: start;
+    }
+
+    .wrapperImages > .imageAndInfo > .imagem {
+        width: 240px;
+    }
+}
+
+@media (min-width: 1020px) {
+
+    .wrapperImages {
+        column-gap: 0;
+        gap: 0;
+        align-items: start;
+        width: 1000px;
+    }
+
+    .wrapperImages > .imageAndInfo {
+        width: 440px;
+    }
+
+    .wrapperImages > .imageAndInfo > .description {
+        width: 90%;
+        max-width: unset;
+    }
+
+}

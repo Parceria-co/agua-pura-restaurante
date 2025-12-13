@@ -1,0 +1,69 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.marginToNavbar {
+    margin-top: 78px;
+}
+
+.marginTopToHeader {
+    margin-top: 134px;
+}
+
+.eventos {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.eventos > *{
+    position: relative;
+    z-index: 1;
+}
+
+.eventos > .info  {
+    width: 80%;
+    padding: 112px 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    color: white;
+    text-align: center;
+}
+
+.eventos > .info > h3 {
+    font-size: 32px;
+}
+
+.eventos > .info > .wrapperText {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 18px;
+}
+
+.eventos > .info > .wrapperText > .smallText {
+    margin: auto;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.425);      
+    z-index: 1;
+}
+
+
+@media (min-width: 1020px) {
+    .info {
+        max-width: 1104px;
+    }
+}

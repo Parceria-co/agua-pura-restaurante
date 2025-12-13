@@ -1,0 +1,279 @@
+.backgroundInfoOrcamento {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.wrapperInfoOrcamento {
+    width: 100%;
+    margin: auto;
+}
+
+.wrapperInfoOrcamento > * {
+    position: relative;
+    z-index: 1;
+}
+
+.infoOrcamento {
+    width: 80%;
+    margin: 24px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.infoOrcamento > .title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    /* line-height: .9; */
+
+    width: 90%;
+    margin: auto;
+
+    text-align: center;
+    color: white;
+}
+
+.infoOrcamento > .title > h1 {
+    font-size: 56px;
+}
+
+.infoOrcamento > .title > p {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.infoOrcamento > .text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.infoOrcamento > .text > h2 {
+    color: white;
+    font-size: 32px;
+}
+
+.infoOrcamento > .text > .orcamento {
+    margin: auto;
+
+    background-color: rgba(180, 151, 64, 0.562);
+    
+    border-radius: 16px;
+    
+    padding: 16px 16px 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.infoOrcamento > .text > .orcamento > .round {
+    padding: 24px;
+    
+    background-color: rgba(180, 151, 64);
+    color: white;
+    
+    width: 144px;
+    height: 144px;
+    
+    border-radius: 50%;
+    
+    text-align: center;
+    align-content: center;
+    
+    margin: auto;
+
+    text-transform: uppercase;
+}
+
+.infoOrcamento > .text > .orcamento > .round > p > b  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: .9;
+    letter-spacing: -3px;
+}
+
+.infoOrcamento > .text > .orcamento > .round > p > b > .price {
+    font-size: 64px;
+    margin: 0 2px;
+}
+
+.infoOrcamento > .text > .orcamento > .textInfo {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* width: 90%; */
+
+    width: 80%;
+    max-width: 600px;
+
+    margin: auto;
+    gap: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.infoOrcamento > .text > .policy {
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-size: 16px;
+
+    width: 90%;
+    max-width: 400px;
+}
+
+.infoOrcamento > .text > .policy > .linkPrivacyPolicy {
+    color: white;
+    font-weight: 600;
+}
+
+.wrapperInfoInput {
+    width: 90%;
+    margin: 56px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.wrapperInfoInput > .title {
+    color: white;
+    margin: auto;
+}
+
+.wrapperInfoInput > .title > h3 {
+    width: 70%;
+    font-size: 28px;
+}
+
+.wrapperInput {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 80%;
+    max-width: 400px;
+
+    margin: auto;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.field > .input {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.field > .textarea {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.wrapperInput > .button {
+    padding: 16px;
+    border-radius: 24px;
+    border: none;
+    font-size: 18px;
+    background-color: rgba(180, 151, 64);
+    color: white;
+    font-weight: 600;
+    margin: 8px auto;
+    width: 90%;
+    cursor: pointer;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.425);      
+    z-index: 1;
+}
+
+@media (min-width: 750px) {
+
+    .wrapperInfoOrcamento {
+        display: flex;
+        padding: 32px 5%;
+        gap: 40px;
+    }
+    
+    .infoOrcamento {
+        width: 50%;
+        margin: auto 0;
+    }
+
+    .infoOrcamento > .title {
+        gap: initial;       
+    }
+
+    .infoOrcamento > .text > .orcamento > .textInfo {
+        width: 100%;
+    }
+
+    .infoOrcamento > .text > .policy {
+        width: 100%;
+    }
+
+    .wrapperInfoInput {
+        width: 50%;
+        margin: auto 0;
+        gap: 24px;
+    }
+    
+    .wrapperInfoInput > .title {
+        margin: 0;
+    }
+
+    .wrapperInput {
+        width: 100%;
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 1020px) {
+
+    .wrapperInfoOrcamento {
+        padding: unset;
+        margin: auto;
+        width: 90%;
+        max-width: 1104px;
+        gap: 56px;
+
+        justify-content: space-between;
+        margin: 40px auto;
+    }
+    
+    .infoOrcamento {
+        width: 512px;
+        /* padding: 0 32px; */
+    }
+
+    .wrapperInfoInput {
+        width: 512px;
+        /* padding: 0 32px; */
+    }
+
+    .wrapperInfoInput > .title > h3 {
+        width: 100%;
+    }
+}

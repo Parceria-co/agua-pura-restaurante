@@ -1,0 +1,226 @@
+.container {
+    background-color: rgba(0, 0, 0, 0.521);
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+
+    display: flex;
+    align-items: flex-end;
+
+    user-select: none;
+}
+
+.container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modalWrapper {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.modalHandle {
+    position: absolute;
+    top: -16px;
+    
+    width: 100px;
+    height: 6px;
+    
+    background-color: white;
+    
+    cursor: grab;
+
+    border-radius: 10px;
+    
+    z-index: 3;
+}
+
+.modal {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+    max-width: 1104px;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px 16px 0 0;
+    overflow: auto;
+    position: relative;
+}
+
+.wrapperImage {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapperImage > img {
+    height: 100%;
+    /* width: 100%; */
+    object-fit: cover;
+    object-position: center;
+}
+
+.wrapperWine {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;    
+}
+
+.wrapperInfo {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 16px;
+    gap: 8px;
+
+}
+
+.wrapperTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+    width: 100%;
+}
+
+.wrapperTitle > .share {
+    color: gray;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.wrapperInfo > .price {
+    font-weight: 600;
+    color: rgb(44, 44, 44);
+}
+
+.wrapperInfo > .description {
+    color: rgb(102, 102, 102);
+    font-size: 16px;
+}
+
+.wrapperInfo > .code {
+    color: rgb(102, 102, 102);
+
+}
+
+.wrapperTag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    width: 100%;
+
+    margin-top: 8px;
+}
+
+.wrapperTag > div {
+    display: flex;
+    align-items: center;
+
+    padding: 4px 8px;
+    font-size: 12px;
+
+    gap: 8px;
+
+    border-radius: 30px;
+    
+    background-color: rgb(235, 235, 235);
+
+    white-space: nowrap;
+}
+
+.wrapperTag > div > .icon {
+    font-size: 18px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.wrapperTag > div > .color {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+}
+
+.selectVolume {
+    padding: 16px;
+    background-color: rgb(235, 235, 235);
+    font-weight: 600;
+
+}
+
+.wrapperInfo > .volumeAndPrice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.volumeAndPrice > .volume {
+    font-weight: 600;
+}
+
+.volumeAndPrice > .price {
+    font-size: 14px;
+}
+
+.animateBottomIn {
+    animation: slideInBottomIn 0.6s forwards;
+}
+
+.animateBottomOut {
+    animation: slideInBottomOut 0.6s forwards;
+}
+
+@keyframes slideInBottomIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottomOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(105%);
+  }
+}
+
+
+@media (min-width: 750px) {
+
+    .modalWrapper {
+        height: 45%;
+    }
+
+    .modal {
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .wrapperImage {
+        height: 100%;
+        width: 50%;
+    }
+
+    .wrapperWine {
+        width: 50%;
+    }
+}

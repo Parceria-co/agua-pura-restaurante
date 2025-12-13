@@ -1,0 +1,427 @@
+body.dragging *,
+body.dragging {
+  pointer-events: none !important;
+  user-select: none !important;
+  cursor: grabbing !important;
+  transition: none !important;
+}
+
+.dragOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999; /* acima de tudo */
+  background: transparent; /* invisível */
+  cursor: grabbing !important;
+}
+
+
+.container {
+    background-color: rgba(0, 0, 0, 0.521);
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+
+    display: flex;
+    align-items: flex-end;
+
+    user-select: none;
+}
+
+.container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modalWrapper {
+    position: relative;
+    width: 100%;
+    /* height: 48%; */
+    display: flex;
+    justify-content: center;
+}
+
+.modalHandle {
+    position: absolute;
+    top: -16px;
+    
+    width: 100px;
+    height: 6px;
+    
+    background-color: white;
+    
+    cursor: grab;
+
+    border-radius: 10px;
+    
+    z-index: 3;
+}
+
+.modal {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+    max-width: 1104px;
+
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    position: relative;
+
+    /* padding: 20px; */
+}
+
+.headerModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: min-content;
+
+    padding: 20px 20px 0;
+
+    position: relative;
+}
+
+.headerModal > p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.headerModal > .buttonclose {
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+    
+    cursor: pointer;
+}
+
+.wrapperInputText {
+    padding: 32px 20px;
+}
+
+.input {
+    background-color: rgb(235, 235, 235);
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 17px;
+}
+
+.wrapper {
+    padding: 0 20px;
+}
+
+.wrapper > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper > div > p {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.wrapper > div > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.wrapper > div > button:hover {
+    text-decoration: underline;
+}
+
+.wrapper > ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 8px;
+    margin: 16px 0;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge antigo */
+}
+
+.wrapper > ul::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Opera */
+}
+
+.countryIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: 18px;
+    object-fit: cover;
+}
+
+.wrapper > ul > li {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    white-space: nowrap;
+
+    font-size: 14px;
+    padding: 5px 8px;
+    border: 1px solid rgb(224, 224, 224);
+
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    transition: ease 0.3s;
+}
+
+.wrapper > ul > li:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.wrapper > ul > li > .color {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+}
+
+.wrapper > ul > li.selected {
+    border: 1px solid black;
+}
+
+.wrapperAdvanced {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    border-top: 1px solid rgb(224, 224, 224);
+    border-bottom: 1px solid #e0e0e0;
+
+    padding: 6px 20px;
+}
+
+.wrapperAdvanced > button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0;
+
+    color: rgb(156, 29, 29);
+    font-weight: 600;
+
+    font-size: 16px;
+}
+
+.wrapperAdvanced > button:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.wrapperButtons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    gap: 20px;
+}
+
+.wrapperButtons > button {
+    width: 50%;
+    padding: 12px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    opacity: 0.4;
+    pointer-events: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.wrapperButtons > .buttonClear {
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.wrapperButtons > .buttonFilter {
+    background-color: #9c1d1d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapperButtons > .buttonActive {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.badge {
+  margin-left: 8px;
+  background: white;
+  color: #a00000; /* ou a cor principal do seu tema */
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 4px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sliderWrapper {
+    position: relative;
+    margin: 16px 0;
+}
+
+.rangeInput {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  opacity: 0; /* 👈 esconde o input original */
+  pointer-events: all;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 3;
+}
+
+.rangeTrackBackground {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: #e0e0e0;
+}
+
+.rangeTrack {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  border-radius: 3px;
+  background-color: #9c1d1d;
+  z-index: 1;
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #9c1d1d;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 5;
+  cursor: grab;
+}
+
+.thumb:active {
+    cursor: grabbing;
+}
+
+/* trilho base (remova o padrão do browser) */
+.rangeInput::-webkit-slider-runnable-track {
+  background: transparent;
+  height: 8px;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* thumb (funciona no Chrome, Edge, Safari) */
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #9c1d1d; /* 👈 ajuste aqui */
+  cursor: pointer;
+  box-sizing: border-box; /* 👈 garante que a borda conta no tamanho */
+}
+
+/* Firefox */
+.rangeInput::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #9c1d1d;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Firefox track */
+.rangeInput::-moz-range-track {
+  background: transparent;
+  height: 8px;
+}
+
+.rangeTrack {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  background-color: #9c1d1d;
+  border-radius: 3px;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.rangeTrackBackground {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 8px;
+    background-color: #e0e0e0;
+    width: 100%;
+    z-index: 0;
+}
+
+.animateBottomIn {
+    animation: slideInBottomIn 0.6s forwards;
+}
+
+.animateBottomOut {
+    animation: slideInBottomOut 0.6s forwards;
+}
+
+@keyframes slideInBottomIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottomOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(105%);
+  }
+}
