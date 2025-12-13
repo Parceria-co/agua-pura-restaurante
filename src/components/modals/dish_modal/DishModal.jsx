@@ -15,6 +15,21 @@ export default function DishModal({ info, onClose }) {
 
 	const hasMoreThanOne = info.options?.length > 1;
 
+	const formatMeasures = (options=[]) => {
+        return options
+            .filter(opt => opt.measure?.value)
+            .map((opt, index, array) => {
+                const value = opt.measure.value;
+                const formatted = opt.measure.formatted;
+
+                if (index === array.length - 1) {
+                    return formatted;
+                }
+
+                return value;
+            })
+            .join(" / ");
+    }
 
   return (
 	<div className={`${styles.container} ${visible ? styles.show : styles.hide}`}>
@@ -61,7 +76,7 @@ export default function DishModal({ info, onClose }) {
 			  <div className={styles.wrapper}> 
 				<div className={styles.wrapperInfo}>
 				  <div className={styles.wrapperTitle}>
-					<h3>{info.name} {info?.options[0]?.measure && ( info?.options[0]?.measure?.formatted.split(" ")[0] + "/" + info?.options[1]?.measure?.formatted )}</h3>
+					<h3>{info.name} {formatMeasures(info.options)}</h3>
 					<IoShareSocialOutline 
 					  size={24} 
 					  color="gray" 

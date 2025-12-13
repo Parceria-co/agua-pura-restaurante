@@ -20,11 +20,11 @@ export default function WineSection({
                     ref={(el) => (sectionRefs.current[idx] = el)}
                 >
                     <div className={styles.titleWines}>
-                        <p>{it.tag}</p>
+                        <p>{it.category}</p>
                     </div>
                             
                     <div className={styles.wines}>
-                        {it.wines.map((wine) => (
+                        {it.itens.map((wine) => (
                             <div 
                                 className={`${styles.cardWine} /*selected ? styles.highlights : ""*/`}
                                 onClick={() => { /*handleSelectWine(wine)*/ onClick(wine) }}
@@ -37,10 +37,7 @@ export default function WineSection({
                                     <h3 className={styles.title}>{wine.name}</h3>
                                     <div className={styles.priceAndCode}>
                                         <p className={styles.price}>
-                                            {wine.price.toLocaleString("pt-BR", {
-                                                style: "currency",
-                                                currency: "BRL",
-                                            })} - {wine.volume  }
+                                            {wine.price.formatted} - {wine?.volume  }
                                         </p>
                                         <p className={styles.code}>
                                             Cód: {wine.id}
@@ -50,27 +47,41 @@ export default function WineSection({
                                         {wine.description}
                                     </p>
                                     <div className={styles.wrapperTag}>
-                                        <div>
-                                            <ReactCountryFlag 
-                                                svg
-                                                countryCode={wine.country.code}
-                                                className={styles.icon}
-                                            /> {wine.country.name}
-                                        </div>
-                                        <div>
-                                            <span 
-                                                className={styles.color}
-                                                style={{ backgroundColor: wine.type.color }}
-                                            ></span>
-                                            {wine.type.name}
-                                        </div>
-                                        <div className={styles.grape}><GiGrapes className={styles.icon}/> 
-                                            <span>
-                                                {wine.grape}
-                                            </span>
-                                        </div>
-                                        <div><MdWaterDrop className={styles.icon}/> {wine.alcohol}</div>
-                                        <div><FaMapMarkerAlt className={styles.icon}/> {wine.location}</div>
+                                        {wine?.country && 
+                                            <div>
+                                                <ReactCountryFlag 
+                                                    svg
+                                                    countryCode={wine.country.code}
+                                                    className={styles.icon}
+                                                /> {wine.country.name}
+                                            </div>
+                                        }
+                                        {wine?.type &&
+                                            <div>
+                                                <span 
+                                                    className={styles.color}
+                                                    style={{ backgroundColor: wine.type.color }}
+                                                ></span>
+                                                {wine.type.name}
+                                            </div>
+                                        }
+                                        {wine?.grape && 
+                                            <div className={styles.grape}><GiGrapes className={styles.icon}/> 
+                                                <span>
+                                                    {wine.grape}
+                                                </span>
+                                            </div>
+                                        }
+                                        {wine?.alcohol &&
+                                            <div><MdWaterDrop className={styles.icon}/>
+                                                {wine.alcohol}
+                                            </div>
+                                        }
+                                        {wine?.location && 
+                                            <div><FaMapMarkerAlt className={styles.icon}/> 
+                                                {wine.location}
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                             </div>

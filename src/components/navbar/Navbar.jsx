@@ -57,8 +57,6 @@ export default function Navbar({
 
     const temaClaro = data.theme.white
 
-    console.log(temaClaro);
-    
     return (
         <header 
             className={`${styles.container} ${hide ? styles.hide : ""} ${temaClaro ? styles.lightTheme : ""}`}

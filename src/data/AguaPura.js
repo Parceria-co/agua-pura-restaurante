@@ -171,7 +171,7 @@ export const aguaPura = {
                     name: "Dadinho de Tapioca com Provolone",
                     image: `${baseURL}agua-pura/food_4.jpg`,
                     description: "10 Unidades de Uma Experiência Entre o Salgado, o Doce e o Picante. Acompanha Geleia de Pimenta com Frutas Vermelhas",
-                    // measure: { value: "?", formatted: "?" },
+                    measure: { value: 10, formatted: "10 Unidades" },
                     price: { value: 40.00, formatted: "R$ 40,00" }
                 },
                 {
@@ -281,7 +281,7 @@ export const aguaPura = {
                     id: 51,
                     name: "Contra à Parmegiana Aperitivo",
                     image: defaultDish,
-                    description: "Suculentos Filés de Contra Filé empanados à milanesa, cobertos com um molho artesanal de tomates frescos e finalizados com mussarela derretida e folhas de manjericão fresco. Cortados em aperitivos, são servidos na tábua, para uma experiência de sabor rústica e requintada.",
+                    description: "Suculentos Filés de Contra Filé Empanados à Milanesa, Cobertos com um Molho Artesanal de Tomates Frescos e Finalizados com Mussarela Derretida e Folhas de Manjericão Fresco. Cortados em Aperitivos, São Servidos na Tábua, para uma Experiência de Sabor Rústica e Requintada.",
                     // measure: { value: 350, formatted: "350ml" },
                     price: { value: 120.00, formatted: "R$ 120,00" }
                 },
@@ -313,7 +313,7 @@ export const aguaPura = {
                     id: 55,
                     name: "Camarão Itamambuca",
                     image: defaultDish,
-                    description: "Camarões Frescos Refogados com Álho e Azeite Extravirgem, Servidos Sobre um Cremoso Arroz com Manjericão, Envolto em um Delicado Molho Branco e Gratinado com Mozzarella. Finailzado com Batata Palha Crocante, Criando uma Combinação Sublime de Sabores e Texturas.",
+                    description: "Camarões Frescos Refogados com Álho e Azeite Extravirgem, Servidos Sobre um Cremoso Arroz com Manjericão, Envolto em um Delicado Molho Branco e Gratinado com Mozzarella. Finalizado com Batata Palha Crocante, Criando uma Combinação Sublime de Sabores e Texturas.",
                     // measure: { value: 350, formatted: "350ml" },
                     price: { value: 125.00, formatted: "R$ 125,00" }
                 },
@@ -330,20 +330,20 @@ export const aguaPura = {
                     "description": "A Deliciosa Picanha Vem Crua para Você Poder Escolher o Melhor Ponto da Carne, Aquele que Melhor Agrada Seu Paladar. Acompanha Cesto de Pães, Molho de Alho da Casa, Vinagrete e Farofa.",
                     options: [
                         { 
-                            label: "Picanha",
-                            price: {
-                                value: 190.00, formatted: "R$ 190,00" 
-                            },
-                            measure: { value: 700, formatted: "700G" },
-                            id: 610
-                        },
-                        { 
-                            label: "Picanha",
+                            label: "375g",
                             price: {
                                 value: 150.00, formatted: "R$ 150,00" 
                             },
-                            measure: { value: 375, formatted: "375G" },
+                            measure: { value: 375, formatted: "375g" },
                             id: 611
+                        },
+                        { 
+                            label: "700g",
+                            price: {
+                                value: 190.00, formatted: "R$ 190,00" 
+                            },
+                            measure: { value: 700, formatted: "700g" },
+                            id: 610
                         },
                     ],
                 },
@@ -351,21 +351,21 @@ export const aguaPura = {
                     "id": 63,
                     "name": "Picanha com Shimeji",
                     "image": defaultDish,
-                    "description": "A deliciosa picanha vem crua para você poder escolher o melhor ponto da carne, aquele que melhor agrada seu paladar. Acompanha cesto de pães, molho de alho da casa, vinagrete e farofa.",
+                    "description": "A Deliciosa Picanha Vem Crua para Você Poder Escolher o Melhor Ponto da Carne, Aquele que Melhor Agrada seu Paladar. Acompanha Cesto de Pães, Molho de Alho da Casa, Vinagrete e Farofa.",
                     "price": { "value": 159.00, "formatted": "R$ 159,00" }
                 },
                 {
                     "id": 64,
                     "name": "Chapa Mista",
                     "image": defaultDish,
-                    "description": "Picanha, calabresa, frango e legumes na manteiga, acompanha cesto de pães, molho de alho da casa, vinagrete e farofa.",
+                    "description": "Picanha, Calabresa, Frango e Legumes na Manteiga, Acompanha Cesto de Pães, Molho de Alho da Casa, Vinagrete e Farofa.",
                     "price": { "value": 165.00, "formatted": "R$ 165,00" }
                 },
                 {
                     "id": 65,
                     "name": "Calabresa na Cachaça",
                     "image": defaultDish,
-                    "description": "Calabresa enrolada, cebolas e azeitonas verdes, acompanha cesto de pães, molho de alho da casa, vinagrete e farofa.",
+                    "description": "Calabresa Enrolada, Cebolas e Azeitonas Verdes, Acompanha Cesto de Pães, Molho de Alho da Casa, Vinagrete e Farofa.",
                     "price": { "value": 98.00, "formatted": "R$ 98,00" }
                 }
             ]
@@ -378,14 +378,14 @@ export const aguaPura = {
                     "id": 71,
                     "name": "Isca no Anzol",
                     "image": defaultDish,
-                    "description": "Pedaços de cação empanados e fritos, acompanha molho da casa",
+                    "description": "Pedaços de Cação Empanados e Fritos, Acompanha Molho da Casa",
                     "price": { "value": 70.00, "formatted": "R$ 70,00" }
                 },
                 {
                     "id": 72,
                     "name": "Manjuba Frita",
                     "image": defaultDish,
-                    "description": "Anjuba frita crocante, acompanha maionese verde",
+                    "description": "Manjuba Frita Crocante, Acompanha Maionese Verde",
                     "price": { "value": 45.00, "formatted": "R$ 45,00" }
                 },
                 {
@@ -399,56 +399,56 @@ export const aguaPura = {
                     "id": 74,
                     "name": "Camarão Crocante",
                     "image": defaultDish,
-                    "description": "A sua queridinha, deliciosos camarões envolvidos por uma massa com macarrão ninho, uma porção extremamente crocante, acompanha molho de alho da casa",
+                    "description": "A sua queridinha, Deliciosos Camarões Envolvidos por uma Massa com Macarrão Ninho, uma Porção Extremamente Crocante, Acompanha Molho de Alho da Casa",
                     "price": { "value": 150.00, "formatted": "R$ 150,00" }
                 },
                 {
                     "id": 75,
                     "name": "Shimeji na Manteiga de Garrafa",
                     "image": defaultDish,
-                    "description": "PRATO VEGETARIANO - Shimeji salteado na manteiga de garrafa",
+                    "description": "PRATO VEGETARIANO - Shimeji Salteado na Manteiga de Garrafa",
                     "price": { "value": 48.00, "formatted": "R$ 48,00" }
                 },
                 {
                     "id": 76,
-                    "name": "Tempura",
+                    "name": "Tempurá",
                     "image": defaultDish,
-                    "description": "PRATO VEGANO - Uma seleção de vegetais envolvidos em uma fina camada de massa de tempura, fritos à perfeição para proporcionar uma crocância irresistível, criando um contraste de sabores e texturas.",
+                    "description": "PRATO VEGANO - Uma Seleção de Vegetais Envolvidos em uma Fina Camada de Massa de Tempura, Fritos à Perfeição para Proporcionar uma Crocância Irresistível, Criando um Contraste de Sabores e Texturas.",
                     "price": { "value": 42.00, "formatted": "R$ 42,00" }
                 },
                 {
                     "id": 77,
                     "name": "Iscas de Frango Super Crocantes",
                     "image": defaultDish,
-                    "description": "Iscas de frango super crocantes, acompanha maionese verde",
+                    "description": "Iscas de Frango Super Crocantes, Acompanha Maionese Verde",
                     "price": { "value": 65.00, "formatted": "R$ 65,00" }
                 },
                 {
                     "id": 78,
-                    "name": "À la Mare",
+                    "name": "A la Máre",
                     "image": defaultDish,
-                    "description": "Seleção de peixe fresco (cação), mariscos e camarões, delicadamente empanados e fritos até ficarem dourados e crocantes. Acompanhados de maionese verde caseira, um toque cremoso e refrescante para equilibrar os sabores intensos do mar.",
+                    "description": "Seleção de Peixe Fresco (Cação), Mariscos e Camarões, Delicadamente Empanados e Fritos até Ficarem Dourados e Crocantes. Acompanhados de Maionese Verde Caseira, um Toque Cremoso e Refrescante para Equilibrar os Sabores Intensos do Mar.",
                     "price": { "value": 72.00, "formatted": "R$ 72,00" }
                 },
                 {
                     "id": 79,
                     "name": "Batata Rústica",
                     "image": defaultDish,
-                    "description": "PRATO VEGANO - Fatias rústicas de batata, fritas em formato pedaçados com alho fresco e salpicadas com um toque suave, uma experiência genuína da simplicidade e do sabor autêntico.",
+                    "description": "PRATO VEGANO - Fatias Rústicas de Batata, Fritas até Dourarem, Perfumadas com Alecrim Fresco e Salpicadas com um Toque de Sal Marinho, uma Deliciosa Celebração da Simplicidade e do Sabor Autêntico.",
                     "price": { "value": 46.00, "formatted": "R$ 46,00" }
                 },
                 {
                     "id": 710,
-                    "name": "Batata Rústica",
+                    "name": "Batata Palito",
                     "image": defaultDish,
-                    "description": "PRATO VEGANO",
+                    "description": "PRATO VEGANO - Batata Palito",
                     "price": { "value": 40.00, "formatted": "R$ 40,00" }
                 },
                 {
                     "id": 711,
                     "name": "Batata Supreme",
                     "image": defaultDish,
-                    "description": "Crocantes batatas fritas, cobertas com queijo cheddar derretido e finalizadas com calabresa defumada ralada, proporcionando uma combinação irresistível de sabores intensos e texturas perfeitas.",
+                    "description": "Crocantes Batatas Fritas, Cobertas com Queijo Cheddar Derretido e Finalizadas com Calabresa Defumada Ralada, Proporcionando uma Combinação Irresistível de Sabores Intensos e Texturas Perfeitas.",
                     "price": { "value": 49.00, "formatted": "R$ 49,00" }
                 },
             ]
@@ -461,28 +461,28 @@ export const aguaPura = {
                     "id": 81,
                     "name": "Bruschetta de Shimeji",
                     "image": defaultDish,
-                    "description": "PRATO VEGETARIANO - Pão italiano levemente tostado, com uma camada cremosa de ricota, salteado de shimeji fresco, azeitonas pretas selecionadas e um delicado toque de gorgonzola. Um encontro de texturas e sabores intensos, perfeito para os amantes da alta gastronomia.",
+                    "description": "PRATO VEGETARIANO - Pão Italiano Levemente Tostado, com uma Camada Cremosa de Requeijão, Salteado de Shimeji Fresco, Azeitonas Pretas Selecionadas e um Delicado Toque de Gorgonzola. Um Encontro de Texturas e Sabores Intensos, Perfeito para os Amantes da Alta Gastronomia.",
                     "price": { "value": 65.00, "formatted": "R$ 65,00" }
                 },
                 {
                     "id": 82,
                     "name": "Bruschetta Mediterrânea",
                     "image": defaultDish,
-                    "description": "Sobre crocantes fatias de pão italiano ao azeite, tomates selecionados, um requintado mix de frutos do mar é suavemente abraçado pela cremosidade da mussarela gratinada. Um convite aos sabores frescos e autênticos do Mediterrâneo.",
+                    "description": "Sobre Crocantes Fatias de Pão Italiano ao Azeite, Tomates Selecionados, um Requintado Mix de Frutos do Mar é Suavemente Abraçado pela Cremosidade da Mussarela Gratinada. Um Convite aos Sabores Frescos e Autênticos do Mediterrâneo.",
                     "price": { "value": 65.00, "formatted": "R$ 65,00" }
                 },
                 {
                     "id": 83,
                     "name": "Bruschetta Napolitana",
                     "image": defaultDish,
-                    "description": "PRATO VEGETARIANO - Pão italiano artesanal levemente tostado com vinagrete de tomates frescos e mussarela gratinada. Simples, vibrante e cheio de tradição.",
+                    "description": "PRATO VEGETARIANO - Pão Italiano Artesanal Levemente Tostado com Vinagrete de Tomates Frescos e Mussarela Gratinada. Simples, Vibrante e Cheio de Tradição.",
                     "price": { "value": 58.00, "formatted": "R$ 58,00" }
                 },
                 {
                     "id": 84,
                     "name": "Bruschetta Divina",
                     "image": defaultDish,
-                    "description": "Fatias douradas de pão italiano recebem um toque artesanal de veludo de tomate e manjericão frescos, parmesão gratinado, coroado com lâminas de bacon crocante, e um surpreendente toque de geleia de frutas vermelhas levemente picante. Uma harmonia perfeita entre o salgado e o adocicado, para paladares exigentes.",
+                    "description": "Fatias Douradas de Pão Italiano Recebem um Toque Artesanal de Veludo de Tomate e Manjericão Frescos, Parmesão Gratinado, Coroado com Lâminas de Bacon Crocante, e um Surpreendente Toque de Geleia de Frutas Vermelhas Levemente Picante. Uma Harmonia Perfeita Entre o Salgado e o Adocicado, para paladares Exigentes. A Combinação Perfeita!",
                     "price": { "value": 65.00, "formatted": "R$ 65,00" }
                 }
             ]
@@ -571,16 +571,16 @@ export const aguaPura = {
             "itens": [
                 {
                     "id": 101,
-                    "name": "Fondue de Queijo Gruyère",
+                    "name": "Fondue de Queijo Gruyerer",
                     "image": defaultDish,
-                    "description": "Fondue de queijo Gruyère com snacks de queijo, palitos de cenoura, pão italiano, brócolis, palitos de cenoura, batatas em conserva, tomate cereja, azeitonas e gergelim",
+                    "description": "Fondue de Queijo Gruyerer com Snacks de Queijo, Palitos de Gergilim, Pão Italiano, Brócolis, Palitos de Cenoura, Batatas em Conserva, Tomate Cereja, Azeitonas e Goiabada.",
                     "price": { "value": 120.00, "formatted": "R$ 120,00" }
                 },
                 {
                     "id": 102,
                     "name": "Fondue de Chocolate",
                     "image": defaultDish,
-                    "description": "Fondue de chocolate com marshmallows, banana, frutas da época e suspiros",
+                    "description": "Fondue de chocolate com Marshmallows, Banana, Frutas da Época e Suspiros.",
                     "price": { "value": 89.00, "formatted": "R$ 89,00" }
                 },
             ]
@@ -593,14 +593,14 @@ export const aguaPura = {
                     "id": 111,
                     "name": "Caldo de Feijão Carioca",
                     "image": defaultDish,
-                    "description": "Caldo de feijão carioca acompanha farofa de calabresa e cesta de pães",
+                    "description": "Caldo de Feijão Carioca Acompanha Farofa de Calabresa e Cesta de Pães.",
                     "price": { "value": 28.00, "formatted": "R$ 28,00" }
                 },
                 {
                     "id": 112,
                     "name": "Caldo de Feijão Preto",
                     "image": defaultDish,
-                    "description": "Caldo de feijão preto acompanha farofa de calabresa e cesta de pães",
+                    "description": "Caldo de Feijão Preto Acompanha Farofa de Calabresa e Cesta de Pães.",
                     "price": { "value": 28.00, "formatted": "R$ 28,00" }
                 }
             ]
@@ -613,63 +613,63 @@ export const aguaPura = {
                     "id": 121,
                     "name": "Gelato Nero",
                     "image": defaultDish,
-                    "description": "Deliciosa taça colegial envolvida dentro e fora por brigadeiro, confeitos, com sorvete de creme, crótons de negresco e canudos de waffles.",
+                    "description": "Deliciosa Taça Colegial Envolvida Dentro e Fora por Brigadeiro, Confeitos, com Sorvete de Creme, Crótons de Negresco e Canudos de Waffles.",
                     "price": { "value": 38.00, "formatted": "R$ 38,00" }
                 },
                 {
                     "id": 122,
                     "name": "Petit Gateau",
                     "image": defaultDish,
-                    "description": "Bolo quente com sorvete de creme e calda de ganache de brigadeiro.",
+                    "description": "Bolo Quente com Sorvete de Creme e Calda de Ganache de Brigadeiro.",
                     "price": { "value": 35.00, "formatted": "R$ 35,00" }
                 },
                 {
                     "id": 123,
                     "name": "Ice Cream Morango",
                     "image": defaultDish,
-                    "description": "Sorvete de creme com cobertura, morangos e leite Ninho.",
+                    "description": "Sorvete de Creme com Cobertura, Morangos e Leite Ninho.",
                     "price": { "value": 28.00, "formatted": "R$ 28,00" }
                 },
                 {
                     "id": 124,
                     "name": "Passion Fruit",
                     "image": defaultDish,
-                    "description": "Sorvete de creme com calda in natura de maracujá.",
+                    "description": "Sorvete de Creme com Calda in Natura de Maracujá.",
                     "price": { "value": 28.00, "formatted": "R$ 28,00" }
                 },
                 {
                     "id": 125,
                     "name": "Torta Holandesa",
                     "image": defaultDish,
-                    "description": "Torta holandesa com camadas crocantes e creme",
+                    "description": "Torta holandesa com Camadas Crocantes e Creme.",
                     "price": { "value": 25.00, "formatted": "R$ 25,00" }
                 },
                 {
                     "id": 126,
                     "name": "Tiramisu",
                     "image": defaultDish,
-                    "description": "Clássico tiramisu italiano",
+                    "description": "Clássico Tiramisu Italiano.",
                     "price": { "value": 25.00, "formatted": "R$ 25,00" }
                 },
                 {
                     "id": 127,
                     "name": "Brownie de Chocolate",
                     "image": defaultDish,
-                    "description": "Brownie de chocolate quente com sorvete",
+                    "description": "Brownie de Chocolate Quente com Sorvete",
                     "price": { "value": 25.00, "formatted": "R$ 25,00" }
                 },
                 {
                     "id": 128,
                     "name": "Cheesecake de Frutas Vermelhas",
                     "image": defaultDish,
-                    "description": "Cheesecake com cobertura de frutas vermelhas",
+                    "description": "Cheesecake com Cobertura de Frutas Vermelhas",
                     "price": { "value": 25.00, "formatted": "R$ 25,00" }
                 },
                 {
                     "id": 129,
                     "name": "Mousse de Chocolate",
                     "image": defaultDish,
-                    "description": "Mousse de chocolate cremoso",
+                    "description": "Mousse de Chocolate Cremoso.",
                     "price": { "value": 25.00, "formatted": "R$ 25,00" }
                 }
             ]
@@ -717,14 +717,14 @@ export const aguaPura = {
                     "id": 136,
                     "name": "Caipirinha 2 Limões com Rapadura",
                     "image": defaultDish,
-                    "description": "Caipirinha especial com 2 limões e rapadura",
+                    "description": "Caipirinha Especial com 2 Limões e Rapadura, Seleta, Limão Siciliano, Limão Taiti, Xarope de Açucar e Rapadura",
                     "price": { "value": 35.00, "formatted": "R$ 35,00" }
                 },
                 {
                     "id": 137,
                     "name": "Margarita",
                     "image": defaultDish,
-                    "description": "Tequila, Suco de Limão, Licor Triple Sec, Limão, Gelo Britado e Borda de Sal",
+                    "description": "Tequila, Suco de Limão, Licor Fino, Limão, Gelo Britado e Borda de Sal",
                     "price": { "value": 35.00, "formatted": "R$ 35,00" }
                 },
                 {
@@ -815,7 +815,7 @@ export const aguaPura = {
                     "id": 1320,
                     "name": "Tropical Mango",
                     "image": defaultDish,
-                    "description": "Licor de manga com pimenta, cachaça, energético, manga macerada e gelo",
+                    "description": "Licor de Manga com Pimenta, Cachaça, Energético, Manga Macerada e Gelo",
                     "price": { "value": 38.00, "formatted": "R$ 38,00" }
                 },
                 {
@@ -842,7 +842,7 @@ export const aguaPura = {
                     "id": 142,
                     "name": "Tinto de Verano",
                     "image": defaultDish,
-                    "description": "Vinho seco, suco de limão, laranja, soda e muito gelo",
+                    "description": "Vinho Seco, Suco de Limão, Laranja, Soda e Muito Gelo",
                     "price": { "value": 38.00, "formatted": "R$ 38,00" }
                 },
                 {
@@ -862,91 +862,35 @@ export const aguaPura = {
                     "id": 151,
                     "name": "Gin Tônica",
                     "image": defaultDish,
-                    "description": "Gin com água tônica",
+                    "description": "Gin com Água Tônica",
                     "price": { "value": 35.00, "formatted": "R$ 35,00" }
                 },
                 {
                     "id": 152,
                     "name": "Gin Fizz",
                     "image": defaultDish,
-                    "description": "Gin Fizz clássico",
+                    "description": "Gin Fizz Clássico",
                     "price": { "value": 35.00, "formatted": "R$ 35,00" }
                 },
                 {
                     "id": 153,
-                    "name": "Gin Tropical Coco",
+                    "name": "Gin Tropical",
                     "image": defaultDish,
-                    "description": "Gin com toques tropicais de coco",
-                    "price": { "value": 38.00, "formatted": "R$ 38,00" }
+                    "description": "Gin com Tropical. (Coco, Maçã Verde, Frutas Vermelhas, Pêssego com Morango, Pitaya, Morango, Melancia, Tangerina, Laranja)",
+                    price : {value: 38.00, formatted: "R$ 38,00"} 
                 },
                 {
                     "id": 154,
-                    "name": "Gin Tropical Maçã Verde",
+                    "name": "Gin Tropical Pimenta",
                     "image": defaultDish,
-                    "description": "Gin com maçã verde tropical",
+                    "description": "Gin com Tangerina e Pimenta Gota",
                     "price": { "value": 38.00, "formatted": "R$ 38,00" }
                 },
                 {
                     "id": 155,
-                    "name": "Gin Tropical Frutas Vermelhas",
-                    "image": defaultDish,
-                    "description": "Gin com mix de frutas vermelhas",
-                    "price": { "value": 38.00, "formatted": "R$ 38,00" }
-                },
-                {
-                    "id": 156,
-                    "name": "Gin Tropical Pêssego com Morango",
-                    "image": defaultDish,
-                    "description": "Gin com pêssego e morango",
-                    "price": { "value": 38.00, "formatted": "R$ 38,00" }
-                },
-                {
-                    "id": 157,
-                    "name": "Gin Tropical Pitaya",
-                    "image": defaultDish,
-                    "description": "Gin com pitaya tropical",
-                    "price": { "value": 38.00, "formatted": "R$ 38,00" }
-                },
-                {
-                    "id": 158,
-                    "name": "Gin Tropical Morango",
-                    "image": defaultDish,
-                    "description": "Gin com morango fresco",
-                    "price": { "value": 38.00, "formatted": "R$ 38,00" }
-                },
-                {
-                    "id": 159,
-                    "name": "Gin Tropical Melancia",
-                    "image": defaultDish,
-                    "description": "Gin com melancia refrescante",
-                    "price": { "value": 38.00, "formatted": "R$ 38,00" }
-                },
-                {
-                    "id": 1510,
-                    "name": "Gin Tropical Tangerina",
-                    "image": defaultDish,
-                    "description": "Gin com tangerina cítrica",
-                    "price": { "value": 38.00, "formatted": "R$ 38,00" }
-                },
-                {
-                    "id": 1511,
-                    "name": "Gin Tropical Laranja",
-                    "image": defaultDish,
-                    "description": "Gin com laranja fresca",
-                    "price": { "value": 38.00, "formatted": "R$ 38,00" }
-                },
-                {
-                    "id": 1512,
-                    "name": "Gin Tropical Pimenta",
-                    "image": defaultDish,
-                    "description": "Gin com tangerina e pimenta gota",
-                    "price": { "value": 38.00, "formatted": "R$ 38,00" }
-                },
-                {
-                    "id": 1513,
                     "name": "Gin Tropical Trio",
                     "image": defaultDish,
-                    "description": "Gin com maracujá, abacaxi e hortelã",
+                    "description": "Gin com Maracujá, Abacaxi e Hortelã",
                     "price": { "value": 39.00, "formatted": "R$ 39,00" }
                 }
             ]
@@ -959,229 +903,62 @@ export const aguaPura = {
                     "id": 161,
                     "name": "Corona Long Neck",
                     "image": defaultDish,
-                    "description": "Cerveja Corona em long neck",
+                    "description": "Cerveja Corona em Long Neck",
                     "price": { "value": 16.00, "formatted": "R$ 16,00" }
                 },
                 {
                     "id": 162,
                     "name": "Heineken Long Neck",
                     "image": defaultDish,
-                    "description": "Cerveja Heineken em long neck",
+                    "description": "Cerveja Heineken em Long Neck",
                     "price": { "value": 16.00, "formatted": "R$ 16,00" }
                 },
                 {
                     "id": 163,
                     "name": "Chopp de Vinho",
                     "image": defaultDish,
-                    "description": "Chopp de vinho",
+                    "description": "Chopp de Vinho",
                     "price": { "value": 20.00, "formatted": "R$ 20,00" }
                 },
                 {
                     "id": 164,
-                    "name": "Baden 600ml",
+                    "name": "Baden",
                     "image": defaultDish,
-                    "description": "Cerveja Baden em garrafa 600ml",
+                    measure: { value: 600, formatted: "600ml" },
+                    "description": "Cerveja Baden em Garrafa 600ml",
                     "price": { "value": 34.00, "formatted": "R$ 34,00" }
                 },
                 {
                     "id": 165,
                     "name": "Amstel Lager 600ml",
                     "image": defaultDish,
-                    "description": "Cerveja Amstel Lager em garrafa 600ml",
+                    measure: { value: 600, formatted: "600ml" },
+                    "description": "Cerveja Amstel Lager em Garrafa 600ml",
                     "price": { "value": 17.90, "formatted": "R$ 17,90" }
                 },
                 {
                     "id": 166,
                     "name": "Império Lager 600ml",
                     "image": defaultDish,
-                    "description": "Cerveja Império Lager em garrafa 600ml",
+                    measure: { value: 600, formatted: "600ml" },
+                    "description": "Cerveja Império Lager em Garrafa 600ml",
                     "price": { "value": 18.90, "formatted": "R$ 18,90" }
                 },
                 {
                     "id": 167,
                     "name": "Original 600ml",
                     "image": defaultDish,
-                    "description": "Cerveja Original em garrafa 600ml",
+                    measure: { value: 600, formatted: "600ml" },
+                    "description": "Cerveja Original em Garrafa 600ml",
                     "price": { "value": 20.90, "formatted": "R$ 20,90" }
                 },
                 {
                     "id": 168,
                     "name": "Heineken 600ml",
                     "image": defaultDish,
-                    "description": "Cerveja Heineken em garrafa 600ml",
+                    measure: { value: 600, formatted: "600ml" },
+                    "description": "Cerveja Heineken em Garrafa 600ml",
                     "price": { "value": 22.90, "formatted": "R$ 22,90" }
-                }
-            ]
-        },
-        {
-            "id": 17,
-            "category": "Vinho Tinto",
-            "itens": [
-                {
-                    "id": 171,
-                    "name": "Taça Suave",
-                    "image": defaultDish,
-                    "description": "Taça de vinho tinto suave",
-                    "price": { "value": 20.00, "formatted": "R$ 20,00" }
-                },
-                {
-                    "id": 172,
-                    "name": "Taça Seco",
-                    "image": defaultDish,
-                    "description": "Taça de vinho tinto seco",
-                    "price": { "value": 20.00, "formatted": "R$ 20,00" }
-                },
-                {
-                    "id": 173,
-                    "name": "Concha y Toro (Chile)",
-                    "image": defaultDish,
-                    "description": "Vinho tinto Concha y Toro do Chile",
-                    "price": { "value": 128.00, "formatted": "R$ 128,00" }
-                },
-                {
-                    "id": 174,
-                    "name": "Casillero del Diablo (Chile)",
-                    "image": defaultDish,
-                    "description": "Vinho tinto Casillero del Diablo do Chile",
-                    "price": { "value": 158.00, "formatted": "R$ 158,00" }
-                },
-                {
-                    "id": 175,
-                    "name": "Santa Helena (Chile)",
-                    "image": defaultDish,
-                    "description": "Vinho tinto Santa Helena do Chile",
-                    "price": { "value": 125.00, "formatted": "R$ 125,00" }
-                },
-                {
-                    "id": 176,
-                    "name": "Santa Carolina (Chile)",
-                    "image": defaultDish,
-                    "description": "Vinho tinto Santa Carolina do Chile",
-                    "price": { "value": 140.00, "formatted": "R$ 140,00" }
-                },
-                {
-                    "id": 177,
-                    "name": "Chilano (Chile)",
-                    "image": defaultDish,
-                    "description": "Vinho tinto Chilano do Chile",
-                    "price": { "value": 120.00, "formatted": "R$ 120,00" }
-                },
-                {
-                    "id": 178,
-                    "name": "El Enigma (Chile)",
-                    "image": defaultDish,
-                    "description": "Vinho tinto El Enigma do Chile",
-                    "price": { "value": 120.00, "formatted": "R$ 120,00" }
-                },
-                {
-                    "id": 179,
-                    "name": "Quatro Caminhos (Chile)",
-                    "image": defaultDish,
-                    "description": "Vinho tinto Quatro Caminhos do Chile",
-                    "price": { "value": 100.00, "formatted": "R$ 100,00" }
-                },
-                {
-                    "id": 1710,
-                    "name": "Gomes Aguirre (Espanha)",
-                    "image": defaultDish,
-                    "description": "Vinho tinto Gomes Aguirre da Espanha",
-                    "price": { "value": 130.00, "formatted": "R$ 130,00" }
-                },
-                {
-                    "id": 1711,
-                    "name": "Aguapura Suave",
-                    "image": defaultDish,
-                    "description": "Vinho tinto Aguapura Suave",
-                    "price": { "value": 80.00, "formatted": "R$ 80,00" }
-                },
-                {
-                    "id": 1712,
-                    "name": "Aguapura Seco",
-                    "image": defaultDish,
-                    "description": "Vinho tinto Aguapura Seco",
-                    "price": { "value": 80.00, "formatted": "R$ 80,00" }
-                }
-            ]
-        },
-        {
-            "id": 18,
-            "category": "Espumantes",
-            "itens": [
-                {
-                    "id": 181,
-                    "name": "Veuve Cliequot (França)",
-                    "image": defaultDish,
-                    "description": "Espumante Veuve Clicquot da França",
-                    "price": { "value": 600.00, "formatted": "R$ 600,00" }
-                },
-                {
-                    "id": 182,
-                    "name": "Veuve Cliequot Mini (França)",
-                    "image": defaultDish,
-                    "description": "Espumante Veuve Clicquot Mini da França",
-                    "price": { "value": 250.00, "formatted": "R$ 250,00" }
-                },
-                {
-                    "id": 183,
-                    "name": "Chandon",
-                    "image": defaultDish,
-                    "description": "Espumante Chandon",
-                    "price": { "value": 140.00, "formatted": "R$ 140,00" }
-                },
-                {
-                    "id": 184,
-                    "name": "Chandon Mini",
-                    "image": defaultDish,
-                    "description": "Espumante Chandon Mini",
-                    "price": { "value": 80.00, "formatted": "R$ 80,00" }
-                },
-                {
-                    "id": 185,
-                    "name": "Aurora Moscatel (Brasil)",
-                    "image": defaultDish,
-                    "description": "Espumante Aurora Moscatel do Brasil",
-                    "price": { "value": 90.00, "formatted": "R$ 90,00" }
-                },
-                {
-                    "id": 186,
-                    "name": "Lambrusco (Itália)",
-                    "image": defaultDish,
-                    "description": "Espumante Lambrusco da Itália",
-                    "price": { "value": 100.00, "formatted": "R$ 100,00" }
-                },
-                {
-                    "id": 187,
-                    "name": "Marcus James (Brasil)",
-                    "image": defaultDish,
-                    "description": "Espumante Marcus James do Brasil",
-                    "price": { "value": 95.00, "formatted": "R$ 95,00" }
-                }
-            ]
-        },
-        {
-            "id": 19,
-            "category": "Vinho Branco / Verde",
-            "itens": [
-                {
-                    "id": 191,
-                    "name": "Terrazas Branco (Argentina)",
-                    "image": defaultDish,
-                    "description": "Vinho branco Terrazas da Argentina",
-                    "price": { "value": 150.00, "formatted": "R$ 150,00" }
-                },
-                {
-                    "id": 192,
-                    "name": "Chalise Branco (Brasil)",
-                    "image": defaultDish,
-                    "description": "Vinho branco Chalise do Brasil",
-                    "price": { "value": 60.00, "formatted": "R$ 60,00" }
-                },
-                {
-                    "id": 193,
-                    "name": "Quadrante Verde (Portugal)",
-                    "image": defaultDish,
-                    "description": "Vinho verde Quadrante de Portugal",
-                    "price": { "value": 110.00, "formatted": "R$ 110,00" }
                 }
             ]
         },
@@ -1200,28 +977,28 @@ export const aguaPura = {
                     "id": 202,
                     "name": "Água Mineral",
                     "image": defaultDish,
-                    "description": "Água mineral sem gás",
+                    "description": "Água Mineral sem Gás",
                     "price": { "value": 7.00, "formatted": "R$ 7,00" }
                 },
                 {
                     "id": 203,
                     "name": "Água com Gás",
                     "image": defaultDish,
-                    "description": "Água mineral com gás",
+                    "description": "Água Mineral com Gás",
                     "price": { "value": 9.00, "formatted": "R$ 9,00" }
                 },
                 {
                     "id": 204,
                     "name": "Suco Natural (Copo)",
                     "image": defaultDish,
-                    "description": "Suco natural de frutas",
+                    "description": "Suco Natural de Frutas",
                     "price": { "value": 15.00, "formatted": "R$ 15,00" }
                 },
                 {
                     "id": 205,
                     "name": "Suco Natural (Jarra)",
                     "image": defaultDish,
-                    "description": "Jarra de suco natural de frutas",
+                    "description": "Jarra de Suco Natural de Frutas",
                     "price": { "value": 36.00, "formatted": "R$ 36,00" }
                 },
                 {
@@ -1242,21 +1019,21 @@ export const aguaPura = {
                     "id": 208,
                     "name": "Gelo de Coco",
                     "image": defaultDish,
-                    "description": "Gelo de coco refrescante",
+                    "description": "Gelo de Coco Refrescante",
                     "price": { "value": 10.00, "formatted": "R$ 10,00" }
                 },
                 {
                     "id": 209,
                     "name": "Chá Mate Gelado (Copo)",
                     "image": defaultDish,
-                    "description": "Chá mate gelado com ou sem limão",
+                    "description": "Chá Mate Gelado com ou sem Limão",
                     "price": { "value": 16.00, "formatted": "R$ 16,00" }
                 },
                 {
                     "id": 2010,
                     "name": "Chá Mate Gelado (Jarra)",
                     "image": defaultDish,
-                    "description": "Jarra de chá mate gelado com ou sem limão",
+                    "description": "Jarra de Chá Mate Gelado com ou sem Limão",
                     "price": { "value": 36.00, "formatted": "R$ 36,00" }
                 }
             ]
@@ -1317,42 +1094,42 @@ export const aguaPura = {
                     "id": 221,
                     "name": "Gin Gordons",
                     "image": defaultDish,
-                    "description": "Gin Gordons com 4 Red Bull/Bopiocala",
+                    "description": "Gin Gordons com 4 Red Bull Tropical e 1 Jarra de Suco de Laranja",
                     "price": { "value": 300.00, "formatted": "R$ 300,00" }
                 },
                 {
                     "id": 222,
                     "name": "Gin Tanqueray 10",
                     "image": defaultDish,
-                    "description": "Gin Tanqueray 10 com 4 Red Bull/Bopiocala",
+                    "description": "Gin Tanqueray com 4 Red Bull Tropical e 1 Jarra de Suco Natural",
                     "price": { "value": 450.00, "formatted": "R$ 450,00" }
                 },
                 {
                     "id": 223,
                     "name": "Red Label Combo",
                     "image": defaultDish,
-                    "description": "Red Label com 2 Red Bull",
+                    "description": "Red Label com 4 Red Bull",
                     "price": { "value": 360.00, "formatted": "R$ 360,00" }
                 },
                 {
                     "id": 224,
                     "name": "Black Label Combo",
                     "image": defaultDish,
-                    "description": "Black Label com 2 Red Bull",
+                    "description": "Black Label com 4 Red Bull",
                     "price": { "value": 470.00, "formatted": "R$ 470,00" }
                 },
                 {
                     "id": 225,
                     "name": "Jack Daniels Combo",
                     "image": defaultDish,
-                    "description": "Jack Daniels com 2 Red Bull",
+                    "description": "Jack Daniels com 4 Red Bull",
                     "price": { "value": 480.00, "formatted": "R$ 480,00" }
                 },
                 {
                     "id": 226,
                     "name": "Buchanans Combo",
                     "image": defaultDish,
-                    "description": "Buchanans com 2 Red Bull",
+                    "description": "Buchanans com 4 Red Bull",
                     "price": { "value": 480.00, "formatted": "R$ 480,00" }
                 },
                 {
@@ -1377,16 +1154,16 @@ export const aguaPura = {
             "itens": [
                 {
                     "id": 231,
-                    "name": "Licor de Cachaça com Pimenta",
+                    "name": "Licor de Cachaça Manga com Pimenta",
                     "image": defaultDish,
-                    "description": "Licor de cachaça com pimenta",
+                    "description": "Licor de Cachaça Manga com Pimenta",
                     "price": { "value": 16.00, "formatted": "R$ 16,00" }
                 },
                 {
                     "id": 232,
                     "name": "Gabriela Cravo e Canela",
                     "image": defaultDish,
-                    "description": "Licor de cachaça Gabriela com cravo e canela",
+                    "description": "Licor de Cachaça Gabriela com Cravo e Canela",
                     "price": { "value": 16.00, "formatted": "R$ 16,00" }
                 },
                 {
@@ -1400,14 +1177,14 @@ export const aguaPura = {
                     "id": 234,
                     "name": "Baileys",
                     "image": defaultDish,
-                    "description": "Licor de creme irlandês Baileys",
+                    "description": "Licor de Creme Irlandês Baileys",
                     "price": { "value": 35.00, "formatted": "R$ 35,00" }
                 },
                 {
                     "id": 235,
                     "name": "Jägermeister",
                     "image": defaultDish,
-                    "description": "Licor de ervas Jägermeister alemão",
+                    "description": "Licor de Ervas Jägermeister Alemão",
                     "price": { "value": 40.00, "formatted": "R$ 40,00" }
                 }
             ]
@@ -1531,7 +1308,7 @@ export const aguaPura = {
                     "id": 253,
                     "name": "Gin Tanqueray 10",
                     "image": defaultDish,
-                    "description": "Garrafa de Gin Tanqueray 10",
+                    "description": "Garrafa de Gin Tanqueray",
                     "price": { "value": 420.00, "formatted": "R$ 420,00" }
                 },
                 {
@@ -1599,6 +1376,197 @@ export const aguaPura = {
                 }
             ]
         }
+    ],
+    wines: [
+         {
+            "id": 17,
+            "category": "Vinho Tinto",
+            "itens": [
+                {
+                    "id": 171,
+                    "name": "Taça Suave",
+                    "image": defaultDish,
+                    "description": "Taça de Vinho Tinto Suave",
+                    "price": { "value": 20.00, "formatted": "R$ 20,00" }
+                },
+                {
+                    "id": 172,
+                    "name": "Taça Seco",
+                    "image": defaultDish,
+                    "description": "Taça de Vinho Tinto Seco",
+                    "price": { "value": 20.00, "formatted": "R$ 20,00" }
+                },
+                {
+                    "id": 173,
+                    "name": "Concha y Toro",
+                    "image": defaultDish,
+                    country: {name: "Chile", code: "CL"},
+                    "description": "Vinho Tinto Concha y Toro do Chile",
+                    "price": { "value": 128.00, "formatted": "R$ 128,00" }
+                },
+                {
+                    "id": 174,
+                    "name": "Casillero del Diablo",
+                    "image": defaultDish,
+                    country: {name: "Chile", code: "CL"},
+                    "description": "Vinho Tinto Casillero del Diablo do Chile",
+                    "price": { "value": 158.00, "formatted": "R$ 158,00" }
+                },
+                {
+                    "id": 175,
+                    "name": "Santa Helena",
+                    "image": defaultDish,
+                    country: {name: "Chile", code: "CL"},
+                    "description": "Vinho Tinto Santa Helena do Chile",
+                    "price": { "value": 125.00, "formatted": "R$ 125,00" }
+                },
+                {
+                    "id": 176,
+                    "name": "Santa Carolina",
+                    "image": defaultDish,
+                    country: {name: "Chile", code: "CL"},
+                    "description": "Vinho Tinto Santa Carolina do Chile",
+                    "price": { "value": 140.00, "formatted": "R$ 140,00" }
+                },
+                {
+                    "id": 177,
+                    "name": "Chilano",
+                    "image": defaultDish,
+                    country: {name: "Chile", code: "CL"},
+                    "description": "Vinho Tinto Chilano do Chile",
+                    "price": { "value": 120.00, "formatted": "R$ 120,00" }
+                },
+                {
+                    "id": 178,
+                    "name": "El Enigma",
+                    "image": defaultDish,
+                    country: {name: "Chile", code: "CL"},
+                    "description": "Vinho Tinto El Enigma do Chile",
+                    "price": { "value": 120.00, "formatted": "R$ 120,00" }
+                },
+                {
+                    "id": 179,
+                    "name": "Quatro Caminhos",
+                    "image": defaultDish,
+                    country: {name: "Chile", code: "CL"},
+                    "description": "Vinho Tinto Quatro Caminhos do Chile",
+                    "price": { "value": 100.00, "formatted": "R$ 100,00" }
+                },
+                {
+                    "id": 1710,
+                    "name": "Gomes Aguirre",
+                    "image": defaultDish,
+                    country: {name: "Espanha", code: "ES"},
+                    "description": "Vinho Tinto Gomes Aguirre da Espanha",
+                    "price": { "value": 130.00, "formatted": "R$ 130,00" }
+                },
+                {
+                    "id": 1711,
+                    "name": "Aguapura Suave",
+                    "image": defaultDish,
+                    "description": "Vinho Tinto Aguapura Suave",
+                    "price": { "value": 80.00, "formatted": "R$ 80,00" }
+                },
+                {
+                    "id": 1712,
+                    "name": "Aguapura Seco",
+                    "image": defaultDish,
+                    "description": "Vinho Tinto Aguapura Seco",
+                    "price": { "value": 80.00, "formatted": "R$ 80,00" }
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "category": "Espumantes",
+            "itens": [
+                {
+                    "id": 181,
+                    "name": "Veuve Cliequot",
+                    "image": defaultDish,
+                    country: {name: "França", code: "FR"},
+                    "description": "Espumante Veuve Clicquot da França",
+                    "price": { "value": 600.00, "formatted": "R$ 600,00" }
+                },
+                {
+                    "id": 182,
+                    "name": "Veuve Cliequot Mini",
+                    "image": defaultDish,
+                    country: "França",
+                    country: {name: "França", code: "FR"},
+                    "description": "Espumante Veuve Clicquot Mini da França",
+                    "price": { "value": 250.00, "formatted": "R$ 250,00" }
+                },
+                {
+                    "id": 183,
+                    "name": "Chandon",
+                    "image": defaultDish,
+                    "description": "Espumante Chandon",
+                    "price": { "value": 140.00, "formatted": "R$ 140,00" }
+                },
+                {
+                    "id": 184,
+                    "name": "Chandon Mini",
+                    "image": defaultDish,
+                    "description": "Espumante Chandon Mini",
+                    "price": { "value": 80.00, "formatted": "R$ 80,00" }
+                },
+                {
+                    "id": 185,
+                    "name": "Aurora Moscatel",
+                    "image": defaultDish,
+                    country: {name: "Brasil", code: "BR"},
+                    "description": "Espumante Aurora Moscatel do Brasil",
+                    "price": { "value": 90.00, "formatted": "R$ 90,00" }
+                },
+                {
+                    "id": 186,
+                    "name": "Lambrusco",
+                    "image": defaultDish,
+                    country: {name: "Itália", code: "IT"},
+                    "description": "Espumante Lambrusco da Itália",
+                    "price": { "value": 100.00, "formatted": "R$ 100,00" }
+                },
+                {
+                    "id": 187,
+                    "name": "Marcus James",
+                    "image": defaultDish,
+                    country: {name: "Brasil", code: "BR"},
+                    "description": "Espumante Marcus James do Brasil",
+                    "price": { "value": 95.00, "formatted": "R$ 95,00" }
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "category": "Vinho Branco / Verde",
+            "itens": [
+                {
+                    "id": 191,
+                    "name": "Terrazas Branco",
+                    "image": defaultDish,
+                    country: {name: "Argentina", code: "AR"},
+                    "description": "Vinho Branco Terrazas da Argentina",
+                    "price": { "value": 150.00, "formatted": "R$ 150,00" }
+                },
+                {
+                    "id": 192,
+                    "name": "Chalise Branco",
+                    "image": defaultDish,
+                    country: {name: "Brasil", code: "BR"},
+                    "description": "Vinho Branco Chalise do Brasil",
+                    "price": { "value": 69.00, "formatted": "R$ 69,00" }
+                },
+                {
+                    "id": 193,
+                    "name": "Quadrante Verde",
+                    "image": defaultDish,
+                    country: {name: "Portugal", code: "PT"},
+                    "description": "Vinho Verde Quadrante de Portugal",
+                    "price": { "value": 110.00, "formatted": "R$ 110,00" }
+                }
+            ]
+        }, 
     ],
     links: {
         facebook: "https://www.facebook.com/aguapurabar/",

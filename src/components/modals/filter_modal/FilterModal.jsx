@@ -14,7 +14,7 @@ export default function FilterModal({
     onFilter,
     onClose
 }) {
-    
+
     const { modalRef, translateY, transitionEnabled, visible, closing, animationDone, closeByDrag, handleMouseDown, handleTouchStart,  handleAnimationEnd, closeModal } = useModalHandlers(onClose);
 
     const listCountriesRef = useRef(null);
@@ -226,7 +226,6 @@ export default function FilterModal({
         }
     }, [activeThumb]);
 
-
     useEffect(() => {
         const handleMouseMove = (e) => {
             if (!activeThumb) return;
@@ -312,15 +311,15 @@ export default function FilterModal({
                         {countries && visibleCountries.map((it, idx) => (
                             <li 
                                 key={idx}
-                                onClick={() => toggleSelect(it.name, selectedCountries, setSelectedCountries)}
-                                className={selectedCountries.includes(it.name) ? styles.selected : ""}
+                                onClick={() => toggleSelect(it?.name, selectedCountries, setSelectedCountries)}
+                                className={selectedCountries.includes(it?.name) ? styles.selected : ""}
                             >
                                 <ReactCountryFlag 
                                     svg
-                                    countryCode={it.code} 
+                                    countryCode={it?.code} 
                                     className={styles.countryIcon}
                                 />
-                                {it.name}
+                                {it?.name}
                             </li>
                         ))
                     }
@@ -335,14 +334,14 @@ export default function FilterModal({
                         {types && visibleTypes.map((it, idx) => (
                             <li 
                                 key={idx}
-                                onClick={() => toggleSelect(it.name, selectedTypes, setSelectedTypes)}
-                                className={selectedTypes.includes(it.name) ? styles.selected : ""}
+                                onClick={() => toggleSelect(it?.name, selectedTypes, setSelectedTypes)}
+                                className={selectedTypes.includes(it?.name) ? styles.selected : ""}
                             >
                                 <span 
                                     className={styles.color}
-                                    style={{ backgroundColor: it.color }}
+                                    style={{ backgroundColor: it?.color }}
                                 ></span>
-                                {it.name}
+                                {it?.name}
                             </li>
                         ))}
                     </ul>

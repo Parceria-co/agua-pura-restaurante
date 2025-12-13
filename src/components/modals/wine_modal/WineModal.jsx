@@ -64,23 +64,34 @@ export default function WineModal({
                 </div>
                 <p className={styles.description}>{description}</p>
                 <div className={styles.wrapperTag}>
-                    <div>
-                        <ReactCountryFlag 
-                            svg
-                            countryCode={country.code}
-                            className={styles.icon}
-                        /> {country.name}
-                    </div>
-                    <div>
-                        <span 
-                          className={styles.color}
-                          style={{ backgroundColor: type.color }}
-                        ></span>
-                        {type.name}
-                      </div>
-                    <div><GiGrapes className={styles.icon}/> {grape}</div>
-                    <div><MdWaterDrop className={styles.icon}/> {alcohol}</div>
-                    <div><FaMapMarkerAlt className={styles.icon}/> {location}</div>
+                    {country && 
+						<div>
+							<ReactCountryFlag 
+								svg
+								countryCode={country?.code}
+								className={styles.icon}
+							/> {country?.name}
+                    	</div>
+					}
+                    {type && 
+						<div>
+							<span 
+							className={styles.color}
+							style={{ backgroundColor: type.color }}
+							></span>
+							{type.name}
+						</div>
+					}
+					{grape && 
+                    	<div><GiGrapes className={styles.icon}/> {grape}</div>
+					}
+					{
+						alcohol && 
+                    	<div><MdWaterDrop className={styles.icon}/> {alcohol}</div>
+					}
+					{location && 
+                    	<div><FaMapMarkerAlt className={styles.icon}/> {location}</div>
+					}
                 </div>
             </div>
             <div className={styles.selectVolume}>
@@ -90,7 +101,7 @@ export default function WineModal({
                 <div className={styles.volumeAndPrice}>
                     <p className={styles.volume}>{volume}</p>
                     <p className={styles.price}>
-                        {price?.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
+                        {price.formatted}
                     </p>
                 </div>
                 <p className={styles.code}>Cód: {id}</p>

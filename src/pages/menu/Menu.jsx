@@ -25,6 +25,7 @@ export default function Menu() {
     const data = aguaPura;
 
     const itens = data.menuItens;
+    const infoWines = data.wines;
 
     const navigate = useNavigate();
 
@@ -59,128 +60,13 @@ export default function Menu() {
     const liRefs = useRef([]);
     liRefs.current = [];
 
-    const infoWines = [
-        {
-            id: 1,
-            tag: "Destaque",
-            wines: [
-            {
-                id: 37,
-                name: "Vinho do Porto Ferreira Ruby",
-                price: 119.0,
-                description:
-                "Tradicional vinho do Porto com aromas intensos de frutas vermelhas e final aveludado.",
-                image: wineImage,
-                country: { name: "Portugal", code: "PT" },
-                type: { name: "Fortificado Doce", color: "#b03a2e" },
-                location: "Vila Nova de Gaia",
-                alcohol: "19.5% vol",
-                grape: "Touriga Franca, Tinta Roriz, Tinta Barroca",
-                volume: "750ml",
-            },
-            {
-                id: 38,
-                name: "Chandon Passion Demi-Sec",
-                price: 89.0,
-                description:
-                "Espumante brasileiro refrescante, com notas de frutas tropicais e toque levemente adocicado.",
-                image: wineImage,
-                country: { name: "Brasil", code: "BR" },
-                type: { name: "Espumante Demi-Sec", color: "#f7b64e" },
-                location: "Serra Gaúcha - RS",
-                alcohol: "11.8% vol",
-                grape: "Chardonnay e Moscato",
-                volume: "750ml",
-            },
-            ],
-        },
-        {
-            id: 2,
-            tag: "Argentina",
-            wines: [
-            {
-                id: 101,
-                name: "Luigi Bosca Malbec",
-                price: 149.0,
-                description:
-                "Vinho argentino encorpado, com notas de frutas maduras e toques sutis de baunilha e especiarias.",
-                image: wineImage,
-                country: { name: "Argentina", code: "AR" },
-                type: { name: "Tinto Seco", color: "#7b1e1e" },
-                location: "Mendoza",
-                alcohol: "14.2% vol",
-                grape: "Malbec",
-                volume: "750ml",
-            },
-            {
-                id: 102,
-                name: "Trumpeter Chardonnay",
-                price: 92.0,
-                description:
-                "Branco argentino com aroma de frutas tropicais e toque amanteigado, equilibrado e elegante.",
-                image: wineImage,
-                country: { name: "Argentina", code: "AR" },
-                type: { name: "Branco Seco", color: "#f4e19c" },
-                location: "Mendoza",
-                alcohol: "13% vol",
-                grape: "Chardonnay",
-                volume: "750ml",
-            },
-            {
-                id: 103,
-                name: "Rutini Cabernet Malbec",
-                price: 165.0,
-                description:
-                "Corte argentino sofisticado, com taninos macios e notas de frutas negras e especiarias.",
-                image: wineImage,
-                country: { name: "Argentina", code: "AR" },
-                type: { name: "Tinto Seco", color: "#7b1e1e" },
-                location: "Mendoza",
-                alcohol: "13.5% vol",
-                grape: "Cabernet Sauvignon e Malbec",
-                volume: "750ml",
-            },
-            {
-                id: 104,
-                name: "Salentein Brut Cuvée",
-                price: 115.0,
-                description:
-                "Espumante argentino vibrante com notas de maçã verde e brioche, acidez equilibrada e perlage fina.",
-                image: wineImage,
-                country: { name: "Argentina", code: "AR" },
-                type: { name: "Espumante Brut", color: "#f2d16b" },
-                location: "Valle de Uco - Mendoza",
-                alcohol: "12% vol",
-                grape: "Chardonnay e Pinot Noir",
-                volume: "750ml",
-            },
-            {
-                id: 105,
-                name: "Catena Zapata Malbec Argentino",
-                price: 395.0,
-                description:
-                "Um dos mais icônicos vinhos argentinos, com notas profundas de frutas negras e toques defumados.",
-                image: wineImage,
-                country: { name: "Argentina", code: "AR" },
-                type: { name: "Tinto Premium", color: "#4b0000" },
-                location: "Mendoza",
-                alcohol: "14% vol",
-                grape: "Malbec",
-                volume: "750ml",
-            },
-            ],
-        },
-        ];
-
-
-
     const [currentFilters, setCurrentFilters] = useState({
         text: "",
         countries: [],
         types: [],
         grapes: [],
         volumes: [],
-        priceRange: [0, Math.max(...infoWines.flatMap(group => group.wines.map(w => w.price)))]
+        priceRange: [0, Math.max(...infoWines.flatMap(group => group.itens.map(w => w.price.value)))]
     });
 
     const [filteredWines, setFilteredWines] = useState(infoWines);
@@ -193,28 +79,28 @@ export default function Menu() {
         const [minPrice, maxPrice] = priceRange;
 
         const filtered = infoWines.map(group => {
-            const winesFiltered = group.wines.filter(wine => {
+            const winesFiltered = group.itens.filter(wine => {
                 const matchText =
                     !text ||
                     wine.name.toLowerCase().includes(text.toLowerCase()) ||
                     wine.description.toLowerCase().includes(text.toLowerCase());
 
                 const matchCountry =
-                    countries.length === 0 || countries.includes(wine.country.name);
+                    countries?.length === 0 || countries.includes(wine?.country?.name);
 
                 const matchType =
-                    types.length === 0 || types.includes(wine.type.name);
+                    types?.length === 0 || types.includes(wine?.type?.name);
 
                 const matchGrape =
-                    grapes.length === 0 ||
-                    grapes.some(g =>
-                    wine.grape.toLowerCase().includes(g.toLowerCase())
+                    grapes?.length === 0 ||
+                    grapes?.some(g =>
+                        wine?.grape?.toLowerCase().includes(g.toLowerCase())
                     );
 
                 const matchVolume =
-                    volumes.length === 0 || volumes.includes(wine.volume);
+                    volumes?.length === 0 || volumes?.includes(wine?.volume);
 
-                const matchPrice = wine.price >= minPrice && wine.price <= maxPrice;
+                const matchPrice = wine.price.value >= minPrice && wine.price.value <= maxPrice;
 
                 return (
                     matchText &&
@@ -226,8 +112,8 @@ export default function Menu() {
                 );
             });
 
-            return { ...group, wines: winesFiltered };
-        }).filter(group => group.wines.length > 0);
+            return { ...group, itens: winesFiltered };
+        }).filter(group => group.itens.length > 0);
 
         setFilteredWines(filtered);
         setFilterOpen(false); // fecha o modal
@@ -501,7 +387,7 @@ export default function Menu() {
                                             ${styles.wineSelected} 
                                             ${selected == idx ? styles.active : ""}`}
                                     >
-                                        {it.tag}
+                                        {it.category}
                                     </li>
                                 ))}
                             </ul>
@@ -543,29 +429,29 @@ export default function Menu() {
                         countries={[
                             ...new Map(
                             infoWines
-                                .flatMap(group => group.wines)
-                                .map(wine => [wine.country.code, wine.country])
+                                .flatMap(group => group.itens)
+                                .map(wine => [wine?.country?.code, wine?.country])
                             ).values()
                         ].sort((a, b) => a.name.localeCompare(b.name))}
 
                         types={[
                             ...new Map(
                             infoWines
-                                .flatMap(group => group.wines)
-                                .map(wine => [wine.type.name, wine.type])
+                                .flatMap(group => group.itens)
+                                .map(wine => [wine?.type?.name, wine?.type])
                             ).values()
                         ].sort((a, b) => a.name.localeCompare(b.name))}
 
                         grapes={[
                             ...new Set(
                                 infoWines
-                                .flatMap(group => group.wines)
+                                .flatMap(group => group.itens)
                                 .flatMap(wine =>
-                                    wine.grape
-                                    .replace(/ e /gi, ",")     // troca " e " por vírgula
-                                    .split(",")                // separa por vírgula
-                                    .map(g => g.trim())        // remove espaços
-                                    .filter(g => g.length > 0) // remove strings vazias
+                                    wine?.grape
+                                    ?.replace(/ e /gi, ",")     // troca " e " por vírgula
+                                    ?.split(",")                // separa por vírgula
+                                    ?.map(g => g.trim())        // remove espaços
+                                    ?.filter(g => g.length > 0) // remove strings vazias
                                 )
                             )
                         ].sort((a, b) => a.localeCompare(b))}
@@ -574,12 +460,12 @@ export default function Menu() {
                         volumes={[
                             ...new Set(
                             infoWines
-                                .flatMap(group => group.wines)
-                                .map(wine => wine.volume.trim())
+                                .flatMap(group => group.itens)
+                                .map(wine => wine?.volume?.trim())
                             )
                         ].sort((a, b) => a.localeCompare(b))}
 
-                        maxPrice={Math.max(...infoWines.flatMap(group => group.wines.map(w => w.price)))
+                        maxPrice={Math.max(...infoWines.flatMap(group => group.itens.map(w => w.price.value)))
 
                         }
 

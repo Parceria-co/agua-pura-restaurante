@@ -15,7 +15,24 @@ export default function DishSection({
     }
 
     const hasMeasure = (it) => {
-        return it.options?.measure;
+        
+        return it.some(item => item.measure);
+    }
+
+    const formatMeasures = (options=[]) => {
+        return options
+            .filter(opt => opt.measure?.value)
+            .map((opt, index, array) => {
+                const value = opt.measure.value;
+                const formatted = opt.measure.formatted;
+
+                if (index === array.length - 1) {
+                    return formatted;
+                }
+
+                return value;
+            })
+            .join(" / ");
     }
 
     return (
@@ -64,7 +81,7 @@ export default function DishSection({
                                         </div>
                                     ):(
                                         <div className={styles.wrapperInfoFoods}>
-                                            <h3 className={styles.title}>{dish.name} {hasMeasure(dish.options?.[0]) && ( dish.options?.[0]?.measure + " / " + dish.options?.[1]?.measure ) }</h3>
+                                            <h3 className={styles.title}>{dish.name} {formatMeasures(dish.options)}</h3>
                                             <p className={styles.description}>
                                                 {dish.description}
                                             </p>
