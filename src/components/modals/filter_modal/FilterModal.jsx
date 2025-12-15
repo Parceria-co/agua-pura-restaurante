@@ -1,3 +1,5 @@
+//www.youtube.com/watch?v=zuna5JVN99I&list=RDApCXqBj98VE&index=4
+
 import { IoClose, IoShareSocialOutline } from "react-icons/io5";
 import styles from "./FilterModal.module.css";
 import { useEffect, useRef, useState } from "react";
@@ -229,16 +231,20 @@ export default function FilterModal({
     useEffect(() => {
         const handleMouseMove = (e) => {
             if (!activeThumb) return;
+
             const slider = document.querySelector(`.${styles.sliderWrapper}`);
             if (!slider) return;
+            
             const rect = slider.getBoundingClientRect();
-
             const percent = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1);
+            
             const value = Math.round(percent * maxPrice);
 
             if (activeThumb === "min" && value < priceRange[1]) {
                 setPriceRange(prev => [value, prev[1]]);
-            } else if (activeThumb === "max" && value > priceRange[0]) {
+            } 
+            
+            if (activeThumb === "max" && value > priceRange[0]) {
                 setPriceRange(prev => [prev[0], value]);
             }
         };
@@ -246,20 +252,20 @@ export default function FilterModal({
         const handleMouseUp = () => {
             setActiveThumb(null);
             document.body.classList.remove("dragging");
-            window.removeEventListener("mousemove", handleMouseMove);
-            window.removeEventListener("mouseup", handleMouseUp);
+            window.removeEventListener("pointermove", handleMouseMove);
+            window.removeEventListener("pointerup", handleMouseUp);
         };
 
         if (activeThumb) {
             document.body.classList.add("dragging");
-            window.addEventListener("mousemove", handleMouseMove);
-            window.addEventListener("mouseup", handleMouseUp);
+            window.addEventListener("pointermove", handleMouseMove);
+            window.addEventListener("pointerup", handleMouseUp);
         }
 
         return () => {
             document.body.classList.remove("dragging");
-            window.removeEventListener("mousemove", handleMouseMove);
-            window.removeEventListener("mouseup", handleMouseUp);
+            window.removeEventListener("pointermove", handleMouseMove);
+            window.removeEventListener("pointerup", handleMouseUp);
         };
     }, [activeThumb, priceRange, maxPrice]);
 
@@ -395,7 +401,8 @@ export default function FilterModal({
                             </div>
 
                             <div 
-                                className={styles.sliderWrapper}>
+                                className={styles.sliderWrapper}
+                            >
                                 <div className={styles.rangeTrackBackground}></div>
                                 <div 
                                     className={styles.rangeTrack}
@@ -422,22 +429,22 @@ export default function FilterModal({
                                     className={styles.rangeInput}
                                 />
 
-                                <div 
+                                <button 
                                     className={styles.thumb}
                                     style={{ left: `${(priceRange[0] / maxPrice) * 100}%` }}
-                                    onMouseDown={(e) => {
+                                    onPointerDown={(e) => {
                                         e.stopPropagation();
                                         setActiveThumb("min");
                                     }}
-                                ></div>
-                                <div
+                                ></button>
+                                <button
                                     className={styles.thumb}
                                     style={{ left: `${(priceRange[1] / maxPrice) * 100}%` }}
-                                    onMouseDown={(e) => {
+                                    onPointerDown={(e) => {
                                         e.stopPropagation();
                                         setActiveThumb("max");
                                     }}
-                                ></div>
+                                ></button>
                             </div>
                         </div>
                     </>

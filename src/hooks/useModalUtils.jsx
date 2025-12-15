@@ -37,6 +37,8 @@ const handleClickOutside = (e) => {
 
 const handleMouseDown = (e) => {
 	const target = e.target.tagName.toLowerCase();
+	console.log(target);
+	
 	if (["input", "button", "select", "textarea", "label"].includes(target)) return;
 	
 	e.preventDefault();
